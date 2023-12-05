@@ -1,0 +1,22 @@
+name: HTML CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    # 这里我们没有构建步骤，因为 HTML 不需要编译
+
+    - name: Run a test script
+      run: echo "Running some tests" # 替换为您的测试命令
+
+    - name: Deploy
+      run: echo "Deploying to server" # 替换为您的部署命令
